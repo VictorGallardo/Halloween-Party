@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scarty Halloween Party</title>
+    <link href="Estilos/Halloween_Style.css" rel="stylesheet">
+    <link href="Imágenes/favicon.ico" rel= "shortcut icon">
+    <script src="JavaScript/visibilidadysonido.js">
+     </script>
+</head>
+<body onload="sonar('lluvia1'); sonar('trackhalloween')">
+    <audio id = "lluvia1" loop>
+        <source src="Sonidos/lluvia1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "trackhalloween" loop>
+        <source src="Sonidos/trackhalloween.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="lidcreak">
+        <source src="Sonidos/lidcreak.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="ScaryGirl">
+        <source src="Sonidos/ScaryGirl.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Dart">
+        <source src="Sonidos/Dart.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="monster"loop>
+        <source src="Sonidos/monster.mp3" type="audio/mpeg">
+    </audio>
+    <div class="rain:before">    
+        <div id="wrapper">
+            
+            <img id="zombies"src="Imágenes/zombies.gif">  
+            <img id="sitio"src="Imágenes/cortijo.jpg">         
+            <h2 id=titulo2>Click on the moon</h2>           
+            <p id="p1">
+                Are you ready <br>
+                for the most <br>
+                terrifying party<br>
+                of the year?<br>
+                                <br>
+                If you want to <br>
+                get your ticket<br>
+                you just have to <br>
+                click on the hand.<br>
+            <p id="p2">                   
+                This is the party site <br>
+                Cortijo Jurado<br>
+                Campanillas<br>
+            <p id="p3">                   
+                Take your ticket
+                                      
+            <div class="rain"> 
+                <div id="moon" onclick="show('p1'); parar('monster'); hide('titulo2'); sonar('Dart'); sonar('ScaryGirl')"></div>
+                <div id="hand" onclick="show('entrada'); hide('p1'); show('sitio'); show('p2'); show('p3'); sonar('lidcreak'); sonar('Dart')"></div> 
+                <img id="entrada" onclick="hide('entrada'); hide('sitio'); hide('p2'); hide('p3'); sonar('monster'); cortar('zombies')">
+                <header id="showcase">
+                    <h1 id=titulo>Scary Halloween Party</h1>
+                </header>      
+            </div>
+        </div>
+    </div>      
+</body>
+</html>
